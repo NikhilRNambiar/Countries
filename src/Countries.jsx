@@ -32,7 +32,7 @@ function Countries() {
                 setCountry(jsonRes);
             }
             catch(error){
-                console.log("Error:",error);
+                console.error("Error fetching data:",error);
             }
            
 
@@ -44,7 +44,6 @@ function Countries() {
         flexWrap:"wrap"
     }}>
         {country.map((countries)=>(<Card key={countries.name} img={countries.flag} imgAlt={countries.abbr} name={countries.name}/>))}
-        <Card/>
     </div>
   )
 }
